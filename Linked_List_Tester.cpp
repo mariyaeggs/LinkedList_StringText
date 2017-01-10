@@ -1,5 +1,6 @@
 //----- Linked_List_Tester.cpp -----
 #include <iostream>
+#include "LinkedList.h"
 /**
  * Programming Assignment 1 : Linked List
  * Course: CST 370 Design & Analysis of Algorithms
@@ -15,6 +16,6 @@
  * @author Mariya Eggensperger
 */
 int main() {
-   std::cout << "Hello, World!" << std::endl;
+   std::cout << sizeof(text_string) << std::endl;
    return 0;
 }

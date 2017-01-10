@@ -1,4 +1,7 @@
 //----- LinkedList.H -----
+#include <iostream>
+using namespace std;
+
 #ifndef PROGRAM1_EGGENSPERGER_MARIYA_LINKEDLIST_H
 #define PROGRAM1_EGGENSPERGER_MARIYA_LINKEDLIST_H
 /**
@@ -15,8 +18,13 @@
  *
  * @author Mariya Eggensperger
 */
+// Global variable for size of character text_string
+const int STRING_SIZE = 52;
+typedef const char text_string[STRING_SIZE];
 
+class LinkedList {
 
+};
 
 
 #endif //PROGRAM1_EGGENSPERGER_MARIYA_LINKEDLIST_H
