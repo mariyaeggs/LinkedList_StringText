@@ -20,9 +20,31 @@ using namespace std;
 */
 // Global variable for size of character text_string
 const int STRING_SIZE = 52;
-typedef const char text_string[STRING_SIZE];
+typedef const char ElementType;
+/**
+ * Header definitions for a LinkedList class.
+ *
+ * @param args Function members & data members.
+ * @return
+*/
 
 class LinkedList {
+
+public:
+    /*--Function Members--*/
+    LinkedList(); // Constructor
+    bool isEmpty() const;
+    void insert(ElementType text_string, int position);
+    void erase(int position);
+
+    void display(ostream & out) const;
+    /*--------------------------------------------------------------------
+	 Display the contents of this LinkedList.
+	 Precondition: Ostream out is open
+	 Postcondition: Elements of this LinkedList have been output to out.
+	 --------------------------------------------------------------------*/
+
+
 
 };
 
