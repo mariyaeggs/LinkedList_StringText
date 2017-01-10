@@ -44,9 +44,14 @@ public:
 	 Postcondition: Elements of this LinkedList have been output to out.
 	 --------------------------------------------------------------------*/
 
+protected:
+    /*--Data Members--*/
+    int mySize; // Current size of list in myStrArray
+    ElementType myStrArray[STRING_SIZE]; // Allowable 52 elements to store in array
 
+}; // --- End of LinkedList class
 
-};
-
+// Output operator prototype
+ostream & operator << (ostream & out, const LinkedList & aList);
 
 #endif //PROGRAM1_EGGENSPERGER_MARIYA_LINKEDLIST_H
