@@ -11,7 +11,7 @@ using namespace std;
  * Professor: Dr. Feiling Jia
  * Source: CLion 2016.3.2 on 1/8/2017
  *
- * The header file defines the data for a program
+ * Header file defines the data for a program which
  * asks a user to enter a text string and display
  * the number of substrings that start with A
  * and end with B.
@@ -19,8 +19,7 @@ using namespace std;
  * @author Mariya Eggensperger
 */
 // Define data type LinkedList for processing LinkedList.
-const int STRING_SIZE = 26;
-//char C[STRING_SIZE];
+const int STRING_SIZE = 26; // Maximum string letters for user input
 /**
  * Header definitions for a LinkedList class.
  *
