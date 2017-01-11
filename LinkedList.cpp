@@ -37,7 +37,7 @@ bool LinkedList::isEmpty() const {
  * @param args If insert() does not surpass CAPACITY or is illegally inserted, allow insertion.
  * @return Return if insertion surpasses CAPACITY or is illegal.
 */
-void LinkedList::insert(char *C, int position) {
+void LinkedList::insert(char *text_string, int position) {
    if (mySize == STRING_SIZE) {
       cerr << "No space available.";
       exit(1);
@@ -51,7 +51,7 @@ void LinkedList::insert(char *C, int position) {
       myStrArray[i] = myStrArray[i-1];
    }
    // Insert new array element at position and increase linked list size
-   myStrArray[position] = ( char )*C;
+   myStrArray[position] = ( char )*text_string;
    mySize++;
 }
 /**

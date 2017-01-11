@@ -1,4 +1,4 @@
-//----- LinkedList.H -----
+//----- LinkedList.h -----
 #include <iostream>
 using namespace std;
 
@@ -33,7 +33,7 @@ public:
     /*--Function Members--*/
     LinkedList(); // Constructor
     bool isEmpty() const;
-    void insert(char C[STRING_SIZE], int position);
+    void insert(char text_string[STRING_SIZE], int position);
     void erase(int position);
     void print(char* C);
     static int countSubStr(char txt_str[]);

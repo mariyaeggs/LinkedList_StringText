@@ -28,16 +28,16 @@ int main() {
 
    // Test insert function
    int position = 0;
-   char C[STRING_SIZE];
+   char text_string[STRING_SIZE];
    cout << "\nEnter a string: ";
-   cin.getline(C, STRING_SIZE);
+   cin.getline(text_string, STRING_SIZE);
    int pos = 1;
-   if (isalpha(( char) *C)) {
+   if (isalpha(( char) *text_string)) {
       puts("(Letters)");
-      for (int i=0; i<LinkedList::countSubStr(C); i++)
-         cout << "\nSubstring "<< pos++ << ": " << C;
-      cout << "\n\nTOTAL " << LinkedList::countSubStr(C) << " substrings" << endl;
-   } else if (isdigit((char) *C)) {
+      for (int i=0; i<LinkedList::countSubStr(text_string); i++)
+         cout << "\nSubstring "<< pos++ << ": " << text_string;
+      cout << "\n\nTOTAL " << LinkedList::countSubStr(text_string) << " substrings" << endl;
+   } else if (isdigit((char) *text_string)) {
       puts("(Digits)");
       exit(1);
    } else {
