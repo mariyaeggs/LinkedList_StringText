@@ -51,4 +51,7 @@ void LinkedList::insert(ElementType text_string, int position) {
    for (int i = mySize; i > position; i--) {
       myStrArray[i] = myStrArray[i-1];
    }
+   // Insert new array element at position and increase linked list size
+   myStrArray[position] = text_string;
+   mySize++;
 }
