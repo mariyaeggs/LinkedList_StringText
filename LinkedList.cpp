@@ -75,6 +75,12 @@ void LinkedList::erase(int position) {
    }
    mySize--;
 }
+/**
+ * Count substrings that start with A and end with B letter(s).
+ *
+ * @param args int substring = 0. Incremented with count of valid substrings.
+ * @return Substring count, substing++
+*/
 int LinkedList::countSubStr(char txt_str[])
 {
    int substring = 0;  // Initialize result
