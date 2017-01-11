@@ -55,3 +55,24 @@ void LinkedList::insert(ElementType text_string, int position) {
    myStrArray[position] = text_string;
    mySize++;
 }
+/**
+ * Function defines deletion methods for List class.
+ *
+ * @param args If erase() does not surpass CAPACITY or is illegally deleted at location, allow deletion.
+ * @return Return if deletion surpasses CAPACITY or is attempted at an illegal location.
+*/
+void LinkedList::erase(int position) {
+   if(mySize == 0) {
+      cerr << "The linked list is empty.";
+      return;
+   }
+   if(position < 0 || position > mySize) {
+      cerr << "Illegal deletion location. List did not change.";
+      return;
+   }
+   // Shift array elements to the left
+   for(int i = position; i < mySize; i++) {
+      myStrArray[i] = myStrArray[i+1];
+   }
+   mySize--;
+}
