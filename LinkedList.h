@@ -18,9 +18,9 @@ using namespace std;
  *
  * @author Mariya Eggensperger
 */
-// Global variable for size of character text_string
+// Define data type LinkedList for processing LinkedList.
 const int STRING_SIZE = 52;
-typedef const char ElementType;
+typedef char ElementType;
 /**
  * Header definitions for a LinkedList class.
  *
@@ -44,7 +44,7 @@ public:
 	 Postcondition: Elements of this LinkedList have been output to out.
 	 --------------------------------------------------------------------*/
 
-protected:
+private:
     /*--Data Members--*/
     int mySize; // Current size of list in myStrArray
     ElementType myStrArray[STRING_SIZE]; // Allowable 52 elements to store in array
