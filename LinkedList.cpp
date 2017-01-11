@@ -76,3 +76,25 @@ void LinkedList::erase(int position) {
    }
    mySize--;
 }
+/**
+ * Display a printed version of the list to console.
+ *
+ * @param args List object is inserted into out, the ostream should be open.
+ * @return A display of the list to out.
+*/
+void LinkedList::display(ostream &out) const {
+   for(int i = 0; i < mySize; i++) {
+      out << myStrArray[i] << " ";
+   }
+}
+/**
+ * Prototype output operator.
+ *
+ * @param args Ostream & out, const List & aList.
+ * @return Out.
+*/
+ostream & operator << (ostream & out, const LinkedList & aList) {
+   aList.display(out);
+   return out;
+}
+
