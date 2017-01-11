@@ -17,32 +17,6 @@ using namespace std;
  *
  * @author Mariya Eggensperger
 */
-void print(char* C) {
-   int i=0;
-   while(C[i]!='\0'){
-      printf("%c", C[i]);
-      i++;
-   }
-   printf("\n");
-}
-int countSubStr(char str[])
-{
-   int res = 0;  // Initialize result
-
-   // Substrings that start with A
-   for (int i=0; str[i] !='\0'; i++)
-   {
-      if (str[i] == 'A')
-      {
-         // Substrings that end with B
-         for (int j=i+1; str[j] !='\0'; j++)
-            if (str[j] == 'B')
-               res++;
-      }
-   }
-   return res;
-}
-
 int main() {
    // Test class constructor
    LinkedList strList;
@@ -55,18 +29,20 @@ int main() {
    // Test insert function
    int position = 0;
    char C[STRING_SIZE];
-   cout << "\nEnter a string: \n";
+   cout << "\nEnter a string: ";
    cin.getline(C, STRING_SIZE);
    int pos = 1;
    if (isalpha(( char) *C)) {
-      puts("Letters");
-      for (int i=0; i<countSubStr(C); i++)
+      puts("(Letters)");
+      for (int i=0; i<LinkedList::countSubStr(C); i++)
          cout << "\nSubstring "<< pos++ << ": " << C;
-      cout << "\n\nTOTAL " << countSubStr(C) << " substrings" << endl;
+      cout << "\n\nTOTAL " << LinkedList::countSubStr(C) << " substrings" << endl;
    } else if (isdigit((char) *C)) {
-      puts("Digits");
+      puts("(Digits)");
+      exit(1);
    } else {
-      puts("Symbol?");
+      puts("(Symbols)");
+      exit(1);
    }
    return 0;
 }

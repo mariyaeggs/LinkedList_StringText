@@ -75,6 +75,23 @@ void LinkedList::erase(int position) {
    }
    mySize--;
 }
+int LinkedList::countSubStr(char txt_str[])
+{
+   int substring = 0;  // Initialize result
+
+   // Substrings that start with A
+   for (int i=0; txt_str[i] !='\0'; i++) // If the nodes are not at NULL
+   {
+      if (txt_str[i] == 'A')
+      {
+         // Substrings that end with B
+         for (int j=i+1; txt_str[j] !='\0'; j++)
+            if (txt_str[j] == 'B')
+               substring++;
+      }
+   }
+   return substring;
+}
 /**
  * Display a printed version of the list to console.
  *

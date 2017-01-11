@@ -37,6 +37,7 @@ public:
     void insert(char C[STRING_SIZE], int position);
     void erase(int position);
     void print(char* C);
+    static int countSubStr(char txt_str[]);
 
     void display(ostream & out) const;
     /*--------------------------------------------------------------------
