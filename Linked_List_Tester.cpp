@@ -23,7 +23,7 @@ int main() {
 
    // Check if list is empty
    if (strList.isEmpty()) {
-      cout << "\nEmpty Linked List. Add something.\n" << strList << endl;
+      cout << "\nEmpty Linked List. Add letters.\n" << strList << endl;
    }
 
    // Test insert function
