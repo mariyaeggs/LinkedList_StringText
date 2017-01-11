@@ -1,6 +1,5 @@
 //----- LinkedList.cpp -----
 #include <iostream>
-#include <cassert>
 using namespace std;
 
 #include "LinkedList.h"
@@ -38,11 +37,11 @@ bool LinkedList::isEmpty() const {
  * @param args If insert() does not surpass CAPACITY or is illegally inserted, allow insertion.
  * @return Return if insertion surpasses CAPACITY or is illegal.
 */
-void LinkedList::insert(ElementType text_string, int position) {
+void LinkedList::insert(char *C, int position) {
    if (mySize == STRING_SIZE) {
       cerr << "No space available.";
       exit(1);
-      }
+   }
    if (position < 0 || position > mySize) { // Where mySize is current size of list in myStrArray
       cerr << "Illegal insertion location. List did not change.";
       return;
@@ -52,7 +51,7 @@ void LinkedList::insert(ElementType text_string, int position) {
       myStrArray[i] = myStrArray[i-1];
    }
    // Insert new array element at position and increase linked list size
-   myStrArray[position] = text_string;
+   myStrArray[position] = ( char )*C;
    mySize++;
 }
 /**
@@ -97,4 +96,12 @@ ostream & operator << (ostream & out, const LinkedList & aList) {
    aList.display(out);
    return out;
 }
-
+char* C[STRING_SIZE];
+void LinkedList::print(char* C) {
+   int i=0;
+   while(C[i]!='\0'){
+      printf("%c", C[i]);
+      i++;
+   }
+   printf("\n");
+}

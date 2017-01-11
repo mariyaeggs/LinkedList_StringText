@@ -19,8 +19,8 @@ using namespace std;
  * @author Mariya Eggensperger
 */
 // Define data type LinkedList for processing LinkedList.
-const int STRING_SIZE = 52;
-typedef char ElementType;
+const int STRING_SIZE = 26;
+//char C[STRING_SIZE];
 /**
  * Header definitions for a LinkedList class.
  *
@@ -34,21 +34,21 @@ public:
     /*--Function Members--*/
     LinkedList(); // Constructor
     bool isEmpty() const;
-    void insert(ElementType text_string, int position);
+    void insert(char C[STRING_SIZE], int position);
     void erase(int position);
+    void print(char* C);
 
     void display(ostream & out) const;
     /*--------------------------------------------------------------------
-	 Display the contents of this LinkedList.
-	 Precondition: Ostream out is open
-	 Postcondition: Elements of this LinkedList have been output to out.
-	 --------------------------------------------------------------------*/
+    Display the contents of this LinkedList.
+    Precondition: Ostream out is open
+    Postcondition: Elements of this LinkedList have been output to out.
+    --------------------------------------------------------------------*/
 
 private:
     /*--Data Members--*/
     int mySize; // Current size of list in myStrArray
-    ElementType myStrArray[STRING_SIZE]; // Allowable 52 elements to store in array
-
+    char myStrArray[STRING_SIZE];
 }; // --- End of LinkedList class
 
 // Output operator prototype
