@@ -5,7 +5,7 @@ using namespace std;
 
 #include "LinkedList.h"
 /**
- * Programming Assignment 1 : Linked List
+ * Title: Programming Assignment 1 : Linked List
  * Course: CST 370 Design & Analysis of Algorithms
  * School: CSU, Monterey Bay
  * Professor: Dr. Feiling Jia

@@ -5,7 +5,7 @@ using namespace std;
 #ifndef PROGRAM1_EGGENSPERGER_MARIYA_LINKEDLIST_H
 #define PROGRAM1_EGGENSPERGER_MARIYA_LINKEDLIST_H
 /**
- * Programming Assignment 1 : Linked List
+ * Title: Programming Assignment 1 : Linked List
  * Course: CST 370 Design & Analysis of Algorithms
  * School: CSU, Monterey Bay
  * Professor: Dr. Feiling Jia
