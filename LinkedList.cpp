@@ -25,7 +25,7 @@ LinkedList::LinkedList()
  * Boolean check if a list is empty.
  *
  * @param args True if the list is empty, false if not.
- * @return Boolean value.
+ * @return Boolean value for size of list.
 */
 bool LinkedList::isEmpty() const {
    return mySize == 0;
@@ -57,7 +57,7 @@ void LinkedList::insert(char *text_string, int position) {
  * Function defines deletion methods for List class.
  *
  * @param args If erase() does not surpass CAPACITY or is illegally deleted at location, allow deletion.
- * @return Return if deletion surpasses CAPACITY or is attempted at an illegal location.
+ * @return void return
 */
 void LinkedList::erase(int position) {
    if(mySize == 0) {
@@ -78,7 +78,7 @@ void LinkedList::erase(int position) {
  * Count substrings that start with A and end with B letter(s).
  *
  * @param args int substring = 0. Incremented with count of valid substrings.
- * @return Substring count, substing++
+ * @return Substring count, str_count
 */
 int LinkedList::countSubStr(char txt_str[])
 {
@@ -108,7 +108,7 @@ int LinkedList::countSubStr(char txt_str[])
  * Display a printed version of the list to console.
  *
  * @param args List object is inserted into out, the ostream should be open.
- * @return A display of the list to out.
+ * @return void return
 */
 void LinkedList::display(ostream &out) const {
    for(int i = 0; i < mySize; i++) {
@@ -125,6 +125,12 @@ ostream & operator << (ostream & out, const LinkedList & aList) {
    aList.display(out);
    return out;
 }
+/**
+ * Print linked list items.
+ *
+ * @param args char* C, while C[i] is not at NULL
+ * @return void return
+*/
 char* C[STRING_SIZE];
 void LinkedList::print(char* C) {
    int i=0;
