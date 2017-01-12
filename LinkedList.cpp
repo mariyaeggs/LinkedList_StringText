@@ -20,7 +20,6 @@ using namespace std;
 // Default constructor
 LinkedList::LinkedList()
         : mySize(0) {
-
 }
 /**
  * Boolean check if a list is empty.
@@ -83,20 +82,27 @@ void LinkedList::erase(int position) {
 */
 int LinkedList::countSubStr(char txt_str[])
 {
-   int substring = 0;  // Initialize result
+   int str_count = 0;  // Initialize result
 
    // Substrings that start with A
    for (int i=0; txt_str[i] !='\0'; i++) // If the nodes are not at NULL
    {
+      string temp_string = "";
       if (txt_str[i] == 'A')
       {
+         temp_string += "A";
          // Substrings that end with B
-         for (int j=i+1; txt_str[j] !='\0'; j++)
-            if (txt_str[j] == 'B')
-               substring++;
+         for (int j=i+1; txt_str[j] !='\0'; j++) {
+            temp_string += txt_str[j];
+            if (txt_str[j] == 'B') {
+               str_count++; // Increment substring count
+               cout << "\nSubstring "<< str_count << ": " << temp_string;
+            }
+         }
       }
    }
-   return substring;
+   cout << "\n\nTOTAL " << str_count << " substrings" << endl;
+   return str_count;
 }
 /**
  * Display a printed version of the list to console.

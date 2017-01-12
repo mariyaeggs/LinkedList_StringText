@@ -1,5 +1,6 @@
 //----- Linked_List_Tester.cpp -----
 #include <iostream>
+#include <sstream>
 using namespace std;
 
 #include "LinkedList.h"
@@ -27,22 +28,19 @@ int main() {
    }
 
    // Test insert function
-   int position = 0;
    char text_string[STRING_SIZE];
-   cout << "\nEnter a string: ";
+   string temp_string;
+   cout << "Enter a string: ";
    cin.getline(text_string, STRING_SIZE);
-   int pos = 1;
    if (isalpha(( char) *text_string)) {
       puts("(Letters)");
-      for (int i=0; i<LinkedList::countSubStr(text_string); i++)
-         cout << "\nSubstring "<< pos++ << ": " << text_string;
-      cout << "\n\nTOTAL " << LinkedList::countSubStr(text_string) << " substrings" << endl;
+      LinkedList::countSubStr(text_string);
    } else if (isdigit((char) *text_string)) {
       puts("(Digits)");
-      exit(1);
+      exit(1); // Terminate program
    } else {
       puts("(Symbols)");
-      exit(1);
+      exit(1); // Terminate program
    }
    return 0;
 }
